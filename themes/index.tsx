@@ -123,6 +123,15 @@ let theme = createTheme({
       lineHeight: 1.5,
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1160,
+      xl: 1440,
+    },
+  },
   mixins: {
     toolbar: {
       minHeight: 70,
@@ -194,192 +203,6 @@ let theme = createTheme({
       },
       defaultProps: {
         // deleteIcon: <CloseIcon fontSize="small" />,
-      },
-    },
-    MuiDialogTitle: {
-      styleOverrides: {
-        root: {
-          padding: 24,
-        },
-      },
-    },
-    MuiDialogActions: {
-      styleOverrides: {
-        root: {
-          paddingBottom: 24,
-          paddingLeft: 24,
-          paddingRight: 24,
-        },
-      },
-    },
-    MuiListItemButton: {
-      styleOverrides: {
-        root: {
-          marginBottom: 4,
-          paddingLeft: 30,
-          paddingTop: 16,
-          paddingBottom: 16,
-          fontWeight: 400,
-          height: "48px",
-          display: "flex",
-          flexDirection: "row",
-
-          "&.Mui-selected": {
-            backgroundColor: "#DFA718",
-            color: "white",
-            borderRight: "5px solid #2c3058",
-            paddingTop: 16,
-            paddingBottom: 16,
-            order: 2,
-            height: "48px",
-            marginBottom: 4,
-            paddingLeft: 30,
-            display: "flex",
-
-            "&:hover": {
-              backgroundColor: "#DFA718",
-              color: "inherit",
-            },
-          },
-        },
-      },
-    },
-
-    MuiMenuItem: {
-      styleOverrides: {
-        root: {
-          fontSize: "16px !important",
-          "&.Mui-selected": {
-            background: "#ECEDF4",
-            "&:hover": {
-              background: "#ECEDF4",
-            },
-          },
-          "&:hover": {
-            background: "#ECEDF4",
-          },
-        },
-      },
-    },
-
-    MuiListItemIcon: {
-      styleOverrides: {
-        root: {
-          color: "inherit",
-          minWidth: 44,
-        },
-      },
-    },
-    MuiListItemText: {
-      styleOverrides: {
-        secondary: {
-          color: "white",
-          opacity: 0.9,
-        },
-      },
-      defaultProps: {
-        primaryTypographyProps: {
-          variant: "subtitle1",
-        },
-      },
-    },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: {
-          background: "white",
-          color: "#575757",
-          "&.Mui-disabled": {
-            background: "#F0F0F0",
-          },
-        },
-        input: {
-          padding: "16.5px 14px",
-        },
-        inputSizeSmall: {
-          padding: "8.5px 14px",
-        },
-        notchedOutline: {
-          borderColor: "#B5B5B5",
-        },
-        multiline: {
-          padding: 0,
-        },
-      },
-    },
-    MuiSvgIcon: {
-      styleOverrides: {
-        fontSizeSmall: {
-          fontSize: "14px !important",
-        },
-      },
-    },
-    MuiTable: {
-      styleOverrides: {
-        root: {
-          width: "100%",
-        },
-      },
-    },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          fontSize: 16,
-          fontWeight: 400,
-          "&.Mui-selected": {
-            fontWeight: 700,
-          },
-        },
-      },
-    },
-    MuiTabs: {
-      styleOverrides: {
-        root: {
-          width: "100%",
-          fontSize: 16,
-          lineHeight: 1.5,
-        },
-        indicator: {
-          display: "none",
-        },
-      },
-    },
-    MuiTooltip: {
-      styleOverrides: {
-        tooltip: {
-          fontSize: "14px",
-          padding: "12px",
-          color: "#2C3058",
-          backgroundColor: "#FFFFFF",
-          borderRadius: 10,
-          border: "1px solid rgba(138, 142, 186, 0.3)",
-        },
-        arrow: {
-          fontSize: 14,
-          width: 16,
-          "&::before": {
-            border: "1px solid rgba(138, 142, 186, 0.3)",
-            backgroundColor: "#fff",
-            boxSizing: "border-box",
-          },
-        },
-      },
-    },
-    MuiSwitch: {
-      styleOverrides: {
-        root: {
-          "& .MuiSwitch-switchBase": {
-            "&.Mui-checked": {
-              color: "#fff",
-              "& + .MuiSwitch-track": {
-                backgroundColor: "#dfa718",
-                opacity: 1,
-                "&.Mui-disabled + .MuiSwitch-track": {
-                  opacity: 1,
-                },
-              },
-            },
-          },
-        },
       },
     },
   },
