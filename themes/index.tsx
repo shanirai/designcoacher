@@ -3,11 +3,11 @@ import { createTheme } from "@mui/material/styles";
 let theme = createTheme({
   palette: {
     primary: {
-      main: "#2C3058",
+      main: "#FD6262",
     },
     secondary: {
-      main: "#8A8EBA",
-      light: "#ECEDF4",
+      main: "#FAE56C",
+      light: "#FFBAAB",
       dark: "#DFA718",
       contrastText: "#FFFFFF",
     },
@@ -19,20 +19,18 @@ let theme = createTheme({
       main: "#D20000",
     },
     text: {
-      primary: "#222222",
-      secondary: "#4D4D4D",
+      primary: "#121212",
+      secondary: "#FFFFFF",
     },
     grey: {
       100: "#FFFFFF",
-      200: "#F0F0F0",
-      300: "#DDDDDD",
-      400: "#B5B5B5",
-      500: "#575757",
-      600: "#141414",
+      200: "#D2B6FF",
+      300: "#ACC4FE",
+      400: "#FFBAAB",
     },
   },
   shape: {
-    borderRadius: 10,
+    borderRadius: 8,
   },
   typography: {
     fontFamily: [
@@ -48,13 +46,13 @@ let theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(","),
     h1: {
-      fontSize: 32,
+      fontSize: 44,
       fontStyle: "normal",
       fontWeight: "bold",
       lineHeight: 1.5,
     },
     h2: {
-      fontSize: 28,
+      fontSize: 36,
       fontStyle: "normal",
       fontWeight: "bold",
       lineHeight: 1.5,
@@ -148,19 +146,84 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           fontWeight: "bold",
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 1.5,
         },
         sizeSmall: {
           height: 30,
-          paddingLeft: 24,
-          paddingRight: 24,
         },
         sizeMedium: {
           height: 44,
         },
         sizeLarge: {
           height: 48,
+        },
+        containedPrimary: {
+          background: "#FD6262",
+          borderRadius: 8,
+          zIndex: 1,
+          color: "#FFFFFF",
+          border: "2px solid #121212",
+          padding: "14px 24px",
+          //   filter: "drop-shadow(0px 5px 6px rgba(44, 48, 88, 0.25))",
+          //   boxShadow: "0px 5px 6px rgba(44, 48, 88, 0.25)",
+          boxShadow: "2px 2px #121212",
+          overflow: "hidden",
+          "&:hover": {
+            color: "#fff",
+            boxShadow: "none",
+            background: "#FD6262",
+          },
+          //   "&::before": {
+          //     content: '""',
+          //     position: "absolute",
+          //     left: "-100%",
+          //     width: "100%",
+          //     height: "100%",
+          //     background: "#dfa718",
+          //     transition: "all 0.5s",
+          //     borderRadius: 25,
+          //     zIndex: "-1",
+          //   },
+          //   "&:hover": {
+          //     color: "#fff",
+          //     boxShadow: "0px 5px 6px rgba(44, 48, 88, 0.25)",
+          //   },
+          //   "&:hover::before": {
+          //     left: 0,
+          //     width: "100%",
+          //   },
+        },
+        outlined: {
+          background: "transparent",
+          // outline: "2px solid #2c3058 !important",
+          borderRadius: 25,
+          zIndex: 1,
+          color: "#FFFFFF",
+          boxShadow: "0px 5px 6px rgba(44, 48, 88, 0.25)",
+          paddingLeft: 30,
+          paddingRight: 30,
+          overflow: "hidden",
+
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            left: "-100%",
+            width: "100%",
+            height: "100%",
+            background: "#2c3058",
+            transition: "all 0.5s",
+            borderRadius: 25,
+            zIndex: "-1",
+          },
+          "&:hover": {
+            color: "#fff",
+            boxShadow: "0px 5px 6px rgba(44, 48, 88, 0.25)",
+          },
+          "&:hover::before": {
+            left: 0,
+            width: "100%",
+          },
         },
       },
       defaultProps: {
