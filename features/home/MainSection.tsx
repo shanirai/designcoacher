@@ -16,7 +16,14 @@ function MainSection() {
           <Typography variant="body1" mt={2.5} mb={5}>
             Learn from an expert with 10+ years of experience.
           </Typography>
-          <Button variant="contained">Submit</Button>
+          <Box>
+            <input
+              type="email"
+              placeholder="Email Id"
+              className="customInput"
+            />
+            <Button variant="contained">Submit</Button>
+          </Box>
         </Grid>
         <Grid item xs={12} sm={6} justifyContent={`flex-end`}>
           <Box

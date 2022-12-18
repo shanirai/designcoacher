@@ -4,6 +4,7 @@ import Image from "next/image";
 // Mui packages
 import { Box, Container, Button } from "@mui/material";
 import Head from "next/head";
+import Footer from "./Footer";
 
 // Custom packages
 
@@ -29,6 +30,9 @@ export default function Layout(props: any) {
         </Box>
       </Container>
       <Container maxWidth={"lg"}>{children}</Container>
+      <Container maxWidth={`lg`}>
+        <Footer />
+      </Container>
     </Box>
   );
 }

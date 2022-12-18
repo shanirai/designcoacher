@@ -58,11 +58,11 @@ let theme = createTheme({
       lineHeight: 1.5,
     },
     h3: {
-      fontSize: 24,
+      fontSize: 28,
       fontStyle: "normal",
       fontWeight: "bold",
       lineHeight: 1.5,
-      color: "#2c3058",
+      color: "#121212",
     },
     h4: {
       fontSize: 18,
@@ -194,7 +194,7 @@ let theme = createTheme({
           //     width: "100%",
           //   },
         },
-        outlined: {
+        outlinedPrimary: {
           background: "transparent",
           // outline: "2px solid #2c3058 !important",
           borderRadius: 25,
@@ -233,39 +233,6 @@ let theme = createTheme({
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          background: "#2c3058",
-          color: "#FFFFFF",
-          fontSize: 14,
-          lineHeight: 1.5,
-        },
-        sizeSmall: {
-          height: 18,
-          borderRadius: 50,
-        },
-        sizeMedium: {
-          height: 30,
-          borderRadius: 18,
-        },
-        deleteIcon: {
-          color: "inherit",
-          marginRight: 8,
-        },
-        labelSmall: {
-          paddingLeft: 6,
-          paddingRight: 6,
-        },
-        labelMedium: {
-          paddingLeft: 15,
-          paddingRight: 15,
-        },
-      },
-      defaultProps: {
-        // deleteIcon: <CloseIcon fontSize="small" />,
       },
     },
   },

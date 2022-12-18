@@ -27,8 +27,8 @@ function CTABanner() {
         <Image
           src={`/images/writeIcon.svg`}
           alt="icon"
-          width={50}
-          height={50}
+          width={70}
+          height={70}
         />
         <Typography variant="body1" color={`grey.100`} ml={6}>
           Yes! I want to become UI/UX Designer
