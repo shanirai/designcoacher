@@ -16,8 +16,8 @@ import faqData from "data/faqData";
 
 function FAQ() {
   return (
-    <Box mb={17}>
-      <Typography variant="h3" textAlign={`center`} mb={6}>
+    <Box mb={{ xs: 10, sm: 17 }}>
+      <Typography variant="h3" textAlign={`center`} mb={{ xs: 3, sm: 6 }}>
         FAQ
       </Typography>
       <Grid container columnSpacing={3.5}>

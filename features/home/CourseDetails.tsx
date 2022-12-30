@@ -58,11 +58,11 @@ function CourseDetails() {
     },
   ];
   return (
-    <Box mt={17}>
-      <Typography variant="h2" mb={5}>
+    <Box mt={{ xs: 10, sm: 17 }}>
+      <Typography variant="h2" mb={{ xs: 3, sm: 5 }}>
         UI/UX Course Details
       </Typography>
-      <Grid container columnSpacing={2}>
+      <Grid container columnSpacing={{ sm: 3 }} rowSpacing={{ xs: 5, sm: 0 }}>
         {listData.map((item, index) => (
           <Grid item xs={12} sm={3} key={index}>
             <Box

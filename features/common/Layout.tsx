@@ -1,12 +1,12 @@
 // React , Next js packages
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
 // Mui packages
 import { Box, Container, Button } from "@mui/material";
-import Head from "next/head";
-import Footer from "./Footer";
-
 // Custom packages
+import Footer from "./Footer";
 
 export default function Layout(props: any) {
   //** props - components */
@@ -26,11 +26,13 @@ export default function Layout(props: any) {
           alignItems={`center`}
         >
           <Image src={`/logo.svg`} width={56} height={56} alt="logo" />
-          <Button variant="contained">Book a Demo Class</Button>
+          <Link href={`#footerId`}>
+            <Button variant="contained">Book a Demo Class</Button>
+          </Link>
         </Box>
       </Container>
       <Container maxWidth={"lg"}>{children}</Container>
-      <Container maxWidth={`lg`}>
+      <Container>
         <Footer />
       </Container>
     </Box>
