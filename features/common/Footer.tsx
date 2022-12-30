@@ -118,7 +118,7 @@ function Footer() {
           />
 
           <input
-            type="text"
+            type="number"
             placeholder="Mobile Number"
             className="customInput"
             value={mobile}

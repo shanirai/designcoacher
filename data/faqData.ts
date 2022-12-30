@@ -1,43 +1,36 @@
 export default [
   {
-    label: "What’s the course duration",
+    label: "What’s the course duration?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "It’s a 4-month long course, but it can be extended if you are facing any difficulties on topics of UI/UX. We will not charge it after the 4 months are over.",
   },
   {
-    label: "Will you help me to build the portfolio?",
+    label: "Will you help me to build my portfolio?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "Yes, we will help you build your portfolio and also review it to make it better.",
   },
   {
-    label: "Can you also help to find out the jobs?",
+    label: "Can you personalize the course for me?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "Yes, we can personalize the course based on your knowledge and requirements. Kindly mail us for more details.",
   },
   {
-    label: "Will I certiticate of course?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+    label: "What’s the price for the course?",
+    description: "The total cost for the course is Rs. 50,000/ for 4 months.",
   },
   {
-    label: "Can you personalized the course for me?",
+    label: "Will I get a certificate upon completion of the course?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "Yes, you will get a certificate for completing the course successfully.",
   },
 
   {
     label: "Can we connect with you after the course?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      "Yes, you can connect with us anytime if you need our guidance.",
   },
   {
-    label: "What’s the prize for the course?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-  },
-  {
-    label: "Is it a Offline  or online course?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+    label: "Is it an offline or online course?",
+    description: "It is an online course.",
   },
 ];
