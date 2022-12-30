@@ -26,14 +26,14 @@ function CountSection() {
     },
   ];
   return (
-    <Box mt={17}>
+    <Box mt={{ xs: 10, sm: 17 }}>
       <Paper
         sx={{
           border: "3px solid #121212",
           bgcolor: "#FFEBD6",
           borderRadius: "20px",
-          px: 9.5,
-          py: 8.5,
+          px: { xs: 6, sm: 9.5 },
+          py: { xs: 5, sm: 8.5 },
           boxShadow: "9px 9px 2px 1px #121212",
         }}
       >
@@ -41,7 +41,11 @@ function CountSection() {
           {countList.map((item, index) => {
             return (
               <Grid item xs={12} sm={3} key={index}>
-                <Stack direction={`column`} alignItems={`center`}>
+                <Stack
+                  direction={`column`}
+                  alignItems={`center`}
+                  mb={{ xs: 3, sm: 0 }}
+                >
                   <Typography variant="h1">{item.number}</Typography>
                   <Typography variant="body1">{item.label}</Typography>
                 </Stack>

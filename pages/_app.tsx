@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 // Third party packages
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createCache from "@emotion/cache";
+import { SnackbarProvider } from "notistack";
 // Custom packages
 import theme from "themes";
 
@@ -24,8 +25,15 @@ export default function App(props: CareerChatRecruitersProps) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline == Normalize.css */}
         <CssBaseline />
-
-        <Component {...pageProps} />
+        <SnackbarProvider
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+          autoHideDuration={2000}
+        >
+          <Component {...pageProps} />
+        </SnackbarProvider>
       </ThemeProvider>
     </CacheProvider>
   );

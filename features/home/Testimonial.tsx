@@ -19,10 +19,19 @@ function Testimonial() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
-    <Box mb={17}>
-      <Typography variant="h3" textAlign={`center`} mb={6.5}>
+    <Box mb={{ xs: 10, sm: 17 }} overflow={`hidden`}>
+      <Typography variant="h3" textAlign={`center`} mb={{ xs: 3, sm: 6.5 }}>
         What do my student say?
       </Typography>
       <Box>
@@ -50,7 +59,10 @@ function Testimonial() {
                     <Avatar
                       alt="Remy Sharp"
                       src={item.avatar}
-                      sx={{ width: "80px", height: "80px" }}
+                      sx={{
+                        width: { xs: `40px`, sm: "80px" },
+                        height: { xs: `40px`, sm: "80px" },
+                      }}
                     />
                     <Typography variant="subtitle1" mt={1.5}>
                       {item.name}
@@ -64,7 +76,7 @@ function Testimonial() {
                       src="/images/star.svg"
                       sx={{
                         position: "absolute",
-                        right: "30px",
+                        right: { xs: `10px`, sm: "30px" },
                         top: 10,
                       }}
                     />
