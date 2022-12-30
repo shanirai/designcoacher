@@ -30,7 +30,7 @@ function Testimonial() {
     ],
   };
   return (
-    <Box mb={{ xs: 10, sm: 17 }} overflow={`hidden`}>
+    <Box pb={{ xs: 10, sm: 15 }} overflow={`hidden`}>
       <Typography variant="h3" textAlign={`center`} mb={{ xs: 3, sm: 6.5 }}>
         What do my student say?
       </Typography>

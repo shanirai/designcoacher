@@ -1,6 +1,7 @@
 // React , Next js packages
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 // MUI packages
 import {
   Box,
@@ -38,9 +39,9 @@ function MainSection() {
               placeholder="Email Id"
               className="customInput"
             /> */}
-            <Button variant="contained" onClick={handleSubmit}>
-              Get Started
-            </Button>
+            <Link href={`#footerId`}>
+              <Button variant="contained">Get Started</Button>
+            </Link>
           </Box>
         </Grid>
         <Grid
