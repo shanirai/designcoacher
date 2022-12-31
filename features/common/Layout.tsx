@@ -16,6 +16,7 @@ export default function Layout(props: any) {
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link href="/logo.svg" rel="icon" type="image/png" sizes="16x16" />
       </Head>
       <Container maxWidth={`lg`}>
         <Box
