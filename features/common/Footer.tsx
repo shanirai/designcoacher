@@ -83,7 +83,10 @@ function Footer() {
       >
         <Image src={`/logo.svg`} width={56} height={56} alt="logo" />
         <Box>
-          <Link href={`https://www.linkedin.com/`} target={`_blank`}>
+          <Link
+            href={`https://www.linkedin.com/in/rajatuxd/`}
+            target={`_blank`}
+          >
             <Image
               src={`/images/linkdin.svg`}
               width={30}
@@ -91,14 +94,14 @@ function Footer() {
               alt="logo"
             />
           </Link>
-          <Link href={`https://www.instagram.com/`} target={`_blank`}>
+          {/* <Link href={`https://www.instagram.com/`} target={`_blank`}>
             <Image
               src={`/images/insta.svg`}
               width={30}
               height={20}
               alt="logo"
             />
-          </Link>
+          </Link> */}
         </Box>
       </Box>
       {/* form field */}
