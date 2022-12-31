@@ -44,7 +44,7 @@ function Testimonial() {
                   bgcolor: "#FFEBD6",
                   borderRadius: "8px",
                   boxShadow: "3px 3px 2px 1px #121212",
-                  height: "279px",
+                  height: { xs: "350px", sm: "279px" },
                   mr: "16px",
                 }}
               >
@@ -53,7 +53,7 @@ function Testimonial() {
                     direction={`column`}
                     width={`200px`}
                     borderRight={`3px solid #121212`}
-                    height={`200px`}
+                    height={{ xs: "350px", sm: `200px` }}
                     position={`relative`}
                   >
                     <Avatar
@@ -82,7 +82,11 @@ function Testimonial() {
                     />
                   </Stack>
                   <Stack direction={`column`} width={`320px`}>
-                    <Typography variant="body1" ml={3.75}>
+                    <Typography
+                      variant={"body1"}
+                      ml={{ xs: 2, sm: 3.75 }}
+                      sx={{ fontSize: { xs: "14px", sm: 16 } }}
+                    >
                       {item.description}
                     </Typography>
                   </Stack>
