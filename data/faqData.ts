@@ -16,7 +16,7 @@ export default [
   },
   {
     label: "What’s the price for the course?",
-    description: "The total cost for the course is Rs. 50,000/ for 4 months.",
+    description: "The total cost for the course is Rs. 80,000/ for 4 months.",
   },
   {
     label: "Will I get a certificate upon completion of the course?",
