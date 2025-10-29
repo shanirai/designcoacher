@@ -58,4 +58,4 @@ function CountSection() {
   );
 }
 
-export default CountSection;
+export default React.memo(CountSection);

@@ -57,4 +57,4 @@ function CTABanner() {
   );
 }
 
-export default CTABanner;
+export default React.memo(CTABanner);

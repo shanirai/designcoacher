@@ -131,4 +131,4 @@ function CourseDetails() {
   );
 }
 
-export default CourseDetails;
+export default React.memo(CourseDetails);

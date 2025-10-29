@@ -75,4 +75,4 @@ function MainSection() {
   );
 }
 
-export default MainSection;
+export default React.memo(MainSection);
