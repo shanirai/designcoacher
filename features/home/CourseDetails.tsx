@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Grid, Paper, Typography } from "@mui/material";
 // Custom packages
 
-//** list item - moved outside component to prevent recreation on every render */
+/** list item - moved outside component to prevent recreation on every render */
 const listData = [
   {
     label: [

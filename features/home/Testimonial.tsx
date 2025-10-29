@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Custom packages
 import reviewData from "data/reviewData";
 
-//** slider settings - moved outside component to prevent recreation */
+/** slider settings - moved outside component to prevent recreation */
 const sliderSettings = {
   dots: true,
   infinite: true,

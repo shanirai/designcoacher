@@ -14,8 +14,7 @@ function Footer() {
   /** custom hooks */
   const { enqueueSnackbar } = useSnackbar();
 
-  //** useState hooks */
-
+  /** useState hooks */
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,7 +27,7 @@ function Footer() {
       e.preventDefault();
       setLoading(true);
 
-      //** form data */
+      /** form data */
       const data = {
         student_name: name,
         student_email: email,
@@ -40,7 +39,7 @@ function Footer() {
       enqueueSnackbar("Your Form Submitted Successfully", {
         variant: "success",
       });
-      //** form reset  */
+      /** form reset */
       setName("");
       setEmail("");
       setMobile("");

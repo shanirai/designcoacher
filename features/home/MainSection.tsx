@@ -14,7 +14,7 @@ import {
 // Custom packages
 
 function MainSection() {
-  //** useMediaQuery hooks */
+  /** useMediaQuery hooks */
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (

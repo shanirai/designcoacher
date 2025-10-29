@@ -13,7 +13,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // custom packages
 import faqData from "data/faqData";
 
-//** Accordion styles - extracted to prevent recreation on every render */
+/** Accordion styles - extracted to prevent recreation on every render */
 const accordionStyles = {
   border: "3px solid #121212",
   bgcolor: "#F9F3EE",

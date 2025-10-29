@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Grid, Paper, Typography, Stack } from "@mui/material";
 // Custom packages
 
-//** count data - moved outside component to prevent recreation on every render */
+/** count data - moved outside component to prevent recreation on every render */
 const countList = [
   {
     number: "250+",
