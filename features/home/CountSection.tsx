@@ -1,30 +1,30 @@
 // React , Next js packages
 import React from "react";
-import Image from "next/image";
 // MUI packages
-import { Box, Button, Grid, Paper, Typography, Stack } from "@mui/material";
+import { Box, Grid, Paper, Typography, Stack } from "@mui/material";
 // Custom packages
 
+//** count data - moved outside component to prevent recreation on every render */
+const countList = [
+  {
+    number: "250+",
+    label: "Total Students",
+  },
+  {
+    number: "200+",
+    label: "Placed Students",
+  },
+  {
+    number: "10+",
+    label: "Experience",
+  },
+  {
+    number: "3+",
+    label: "Brand Partner",
+  },
+];
+
 function CountSection() {
-  //** count data */
-  const countList = [
-    {
-      number: "250+",
-      label: "Total Students",
-    },
-    {
-      number: "200+",
-      label: "Placed Students",
-    },
-    {
-      number: "10+",
-      label: "Experience",
-    },
-    {
-      number: "3+",
-      label: "Brand Partner",
-    },
-  ];
   return (
     <Box mt={{ xs: 10, sm: 17 }}>
       <Paper

@@ -20,7 +20,7 @@ export default function App(props: CareerChatRecruitersProps) {
   /** props */
   const { Component, emotionCache = cache, pageProps } = props;
   return (
-    <CacheProvider value={cache}>
+    <CacheProvider value={emotionCache}>
       {/* Material UI theme injection */}
       <ThemeProvider theme={theme}>
         {/* CssBaseline == Normalize.css */}

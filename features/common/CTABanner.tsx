@@ -1,9 +1,9 @@
 // React , Next js packages
 import React from "react";
 import Image from "next/image";
-// MUI packages
-import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+// MUI packages
+import { Box, Button, Typography } from "@mui/material";
 // Custom packages
 
 function CTABanner() {

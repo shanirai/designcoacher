@@ -1,6 +1,5 @@
 // React , Next js packages
 import React from "react";
-import Image from "next/image";
 // MUI packages
 import { Box, Paper, Typography, Stack, Avatar } from "@mui/material";
 // Third party packages
