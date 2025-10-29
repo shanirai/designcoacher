@@ -1,6 +1,5 @@
 // React , Next js packages
 import React from "react";
-import Image from "next/image";
 // MUI packages
 import {
   Box,
@@ -14,6 +13,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // custom packages
 import faqData from "data/faqData";
 
+/** Accordion styles - extracted to prevent recreation on every render */
+const accordionStyles = {
+  border: "3px solid #121212",
+  bgcolor: "#F9F3EE",
+  borderRadius: "8px",
+  marginBottom: "16px",
+  boxShadow: "2px 2px 1px 1px #121212",
+};
+
 function FAQ() {
   return (
     <Box mb={{ xs: 10, sm: 17 }}>
@@ -24,16 +32,7 @@ function FAQ() {
         <Grid item xs={12} sm={6}>
           {faqData.slice(0, 4).map((item, index) => {
             return (
-              <Accordion
-                sx={{
-                  border: "3px solid #121212",
-                  bgcolor: "#F9F3EE",
-                  borderRadius: "8px",
-                  marginBottom: "16px",
-                  boxShadow: "2px 2px 1px 1px #121212",
-                }}
-                key={index}
-              >
+              <Accordion sx={accordionStyles} key={index}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -52,16 +51,7 @@ function FAQ() {
         <Grid item xs={12} sm={6}>
           {faqData.slice(4, 8).map((item, index) => {
             return (
-              <Accordion
-                sx={{
-                  border: "3px solid #121212",
-                  bgcolor: "#F9F3EE",
-                  borderRadius: "8px",
-                  marginBottom: "16px",
-                  boxShadow: "2px 2px 1px 1px #121212",
-                }}
-                key={index}
-              >
+              <Accordion sx={accordionStyles} key={index}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -81,4 +71,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default React.memo(FAQ);

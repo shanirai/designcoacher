@@ -1,9 +1,9 @@
 // React , Next js packages
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // MUI packages
-import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 // Third party packages
 import axios from "axios";
 import { useSnackbar } from "notistack";
@@ -14,24 +14,12 @@ function Footer() {
   /** custom hooks */
   const { enqueueSnackbar } = useSnackbar();
 
-  //** useState hooks */
-
+  /** useState hooks */
   const [loading, setLoading] = useState(false);
-  const [warning, setWarning] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [textArea, setTextArea] = useState("");
-
-  // const handleFormSubmit = () => {
-  //   const data = {
-  //     student_name: name,
-  //     student_email: email,
-  //     student_mobile: mobile,
-  //     student_message: textArea,
-  //   };
-  //   console.log(data, "check final list data");
-  // };
 
   /** custom handlers */
   const handleSubmitForm = async (e: any) => {
@@ -39,29 +27,23 @@ function Footer() {
       e.preventDefault();
       setLoading(true);
 
-      if (name === "" && email === "" && mobile === "" && textArea === "") {
-        setWarning(true);
-      } else {
-        setWarning(false);
-        //** form data */
-        const data = {
-          student_name: name,
-          student_email: email,
-          student_mobile: mobile,
-          student_message: textArea,
-        };
+      /** form data */
+      const data = {
+        student_name: name,
+        student_email: email,
+        student_mobile: mobile,
+        student_message: textArea,
+      };
 
-        await axios.post("/api/hourmailer", data);
-        enqueueSnackbar("Your Form Submitted Successfully", {
-          variant: "success",
-        });
-        console.log("check form datata", data);
-        //** form reset  */
-        setName("");
-        setEmail("");
-        setMobile("");
-        setTextArea("");
-      }
+      await axios.post("/api/hourmailer", data);
+      enqueueSnackbar("Your Form Submitted Successfully", {
+        variant: "success",
+      });
+      /** form reset */
+      setName("");
+      setEmail("");
+      setMobile("");
+      setTextArea("");
     } catch (error) {
       console.error(error);
       enqueueSnackbar("please fill empty box", {
@@ -146,11 +128,6 @@ function Footer() {
             onChange={(e) => setTextArea(e.target.value)}
           />
         </Stack>
-        {warning && (
-          <Typography variant="body2" color={`error`}>
-            please fill empty box{" "}
-          </Typography>
-        )}
         <Box
           display={`flex`}
           flexDirection={`row`}

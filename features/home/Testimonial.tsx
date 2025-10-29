@@ -1,6 +1,5 @@
 // React , Next js packages
 import React from "react";
-import Image from "next/image";
 // MUI packages
 import { Box, Paper, Typography, Stack, Avatar } from "@mui/material";
 // Third party packages
@@ -10,32 +9,33 @@ import "slick-carousel/slick/slick-theme.css";
 // Custom packages
 import reviewData from "data/reviewData";
 
-function Testimonial() {
-  //** slider settings  */
-  const settings = {
-    dots: true,
-    infinite: true,
-    dotsClass: "slick-dots",
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+/** slider settings - moved outside component to prevent recreation */
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  dotsClass: "slick-dots",
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
-  };
+    },
+  ],
+};
+
+function Testimonial() {
   return (
     <Box pb={{ xs: 10, sm: 15 }} overflow={`hidden`}>
       <Typography variant="h3" textAlign={`center`} mb={{ xs: 3, sm: 6.5 }}>
         What do my student say?
       </Typography>
       <Box>
-        <Slider {...settings}>
+        <Slider {...sliderSettings}>
           {reviewData.map((item, index) => (
             <Box key={index}>
               <Paper
@@ -100,4 +100,4 @@ function Testimonial() {
   );
 }
 
-export default Testimonial;
+export default React.memo(Testimonial);

@@ -1,62 +1,62 @@
 // React , Next js packages
 import React from "react";
-import Image from "next/image";
 // MUI packages
 import { Box, Grid, Paper, Typography } from "@mui/material";
 // Custom packages
 
+/** list item - moved outside component to prevent recreation on every render */
+const listData = [
+  {
+    label: [
+      "Basic Graphic Design",
+      "Figma Tools",
+      "Meaning of Colors",
+      "Typography",
+      "Iconography",
+      "Design Principles",
+    ],
+    button_title: "1-4 Weeks",
+    bgColor: "#D2B6FF",
+  },
+  {
+    label: [
+      "UCD",
+      "UX research",
+      "Mobile & website Design",
+      "Design System",
+      "Usability Testing",
+      "Practical implementation",
+    ],
+    button_title: "5-8 Weeks",
+    bgColor: "#ACC4FE",
+  },
+  {
+    label: [
+      "Accessibility",
+      "10 heuristics principles",
+      "gestalt principles",
+      "UX Framework",
+      "Progressive disclosure",
+      "Kano Model",
+    ],
+    button_title: "9-12 Weeks",
+    bgColor: "#FFBAAB",
+  },
+  {
+    label: [
+      "B2b/B2c work culture",
+      "Case Study",
+      "Personal Branding",
+      "Interview Practice",
+      "deal with Clients/CEO",
+      "whiteboard Challenges",
+    ],
+    button_title: "9-12 Weeks",
+    bgColor: "#FFEA9F",
+  },
+];
+
 function CourseDetails() {
-  //** list item */
-  const listData = [
-    {
-      label: [
-        "Basic Graphic Design",
-        "Figma Tools",
-        "Meaning of Colors",
-        "Typography",
-        "Iconography",
-        "Design Principles",
-      ],
-      button_title: "1-4 Weeks",
-      bgColor: "#D2B6FF",
-    },
-    {
-      label: [
-        "UCD",
-        "UX research",
-        "Mobile & website Design",
-        "Design System",
-        "Usability Testing",
-        "Practical implementation",
-      ],
-      button_title: "5-8 Weeks",
-      bgColor: "#ACC4FE",
-    },
-    {
-      label: [
-        "Accessibility",
-        "10 heuristics principles",
-        "gestalt principles",
-        "UX Framework",
-        "Progressive disclosure",
-        "Kano Model",
-      ],
-      button_title: "9-12 Weeks",
-      bgColor: "#FFBAAB",
-    },
-    {
-      label: [
-        "B2b/B2c work culture",
-        "Case Study",
-        "Personal Branding",
-        "Interview Practice",
-        "deal with Clients/CEO",
-        "whiteboard Challenges",
-      ],
-      button_title: "9-12 Weeks",
-      bgColor: "#FFEA9F",
-    },
-  ];
   return (
     <Box mt={{ xs: 10, sm: 17 }}>
       <Typography variant="h2" mb={{ xs: 3, sm: 5 }}>
@@ -131,4 +131,4 @@ function CourseDetails() {
   );
 }
 
-export default CourseDetails;
+export default React.memo(CourseDetails);

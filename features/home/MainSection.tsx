@@ -1,5 +1,5 @@
 // React , Next js packages
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 // MUI packages
@@ -14,14 +14,8 @@ import {
 // Custom packages
 
 function MainSection() {
-  //** useMediaQuery hooks */
+  /** useMediaQuery hooks */
   const isMobile = useMediaQuery("(max-width:600px)");
-  //** useState hooks */
-  const [email, setEmail] = useState("");
-  //** handle submit */
-  const handleSubmit = async () => {
-    console.log("handle submit");
-  };
 
   return (
     <Box mt={5.5}>
@@ -81,4 +75,4 @@ function MainSection() {
   );
 }
 
-export default MainSection;
+export default React.memo(MainSection);
